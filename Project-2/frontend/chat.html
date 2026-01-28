@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amzur Chat Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Amzur Chat Bot</h2>
+                <button id="newChatBtn" class="btn btn-small">+ New Chat</button>
+            </div>
+
+            <div class="user-info">
+                <p id="userNameDisplay"></p>
+                <p id="userEmailDisplay" class="user-email"></p>
+            </div>
+
+            <div class="chat-history">
+                <h3>Chat History</h3>
+                <div id="chatHistoryList" class="history-list">
+                    <p class="empty-message">No chats yet</p>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn btn-danger">Logout</button>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main-chat">
+            <div class="chat-header">
+                <h1>Chat with Gemini AI</h1>
+                <button id="clearChatBtn" class="btn btn-small">Clear Chat</button>
+            </div>
+
+            <div class="chat-box" id="chatBox">
+                <div class="welcome-message">
+                    <h1>Welcome to</h1>
+                    <h2>Amzur Chat Bot</h2>
+                    <p>Start a conversation with Gemini AI. Your chats will be saved automatically.</p>
+                    <div class="feature-list">
+                        <p>✓ All your chats are saved in the database</p>
+                        <p>✓ Access your chat history anytime</p>
+                        <p>✓ Secure authentication with Amzur email</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    placeholder="Type your message here..." 
+                    autocomplete="off"
+                >
+                <button id="sendBtn" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Modal -->
+    <div id="loadingModal" class="modal">
+        <div class="modal-content">
+            <p>Loading your chats...</p>
+            <div class="loading">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
